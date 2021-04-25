@@ -1,6 +1,23 @@
-var path = require('path')
+var path = require('path');
 
 module.exports = [
+  {
+    entry: path.join(__dirname, 'src', 'apng.js'),
+    output: {
+      path: path.join(__dirname, 'lib'),
+      filename: 'apng.js',
+      beautify: false
+    },
+    module: {
+      loaders: [
+        {
+          test: /\.js$/,
+          loader: 'babel-loader',
+          exclude: /[\\\/](node_modules|lib)[\\\/]/
+        }
+      ]
+    }
+  },
   {
     entry: path.join(__dirname, 'src', 'library', 'parser.js'),
     output: {

@@ -1,0 +1,15 @@
+<html>
+
+<head>
+    <script src="./lib/apng.js"></script>
+</head>
+
+<body onclick="png.pause()">
+    <canvas width="200px" height="200px"></canvas>
+    <script>
+        var canvas = document.getElementsByTagName('canvas')[0];
+        var apng = new APNG("./images/locate.png", canvas);
+    </script>
+</body>
+
+</html>
